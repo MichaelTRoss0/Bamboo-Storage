@@ -1,0 +1,14 @@
+{
+  "type" : "minecraft:crafting_shapeless",
+  "ingredients" :
+  [
+    {
+      "item" : "bamboostorage:bamboo_cube"
+    }
+  ],
+  "result" :
+  {
+    "item" : "bamboostorage:bamboo_bundle",
+    "count" : 4
+  }
+}

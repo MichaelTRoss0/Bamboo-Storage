@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "bamboostorage:bamboo_cube"
+    ]
+  },
+  "criteria": {
+    "has_bamboo_bundle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items":[
+              "bamboostorage:bamboo_bundle"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "bamboostorage:bamboo_cube"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bamboo_bundle",
+      "has_the_recipe"
+    ]
+  ]
+}
