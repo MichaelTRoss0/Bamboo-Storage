@@ -2,6 +2,7 @@ buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
+        maven { url = 'https://plugins.gradle.org/m2/' }
         gradlePluginPortal()
         mavenCentral()
     }
@@ -17,6 +18,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'com.matthewprenger.cursegradle'
 apply from: 'gradle/property_helper.gradle'
+apply from: 'gradle/git_changelog.gradle'
 
 version = "${minecraft_version}-${mod_version}"
 group = "${mod_group}" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -146,6 +148,16 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+}
+
+processResources {
+    def buildProps = project.properties.clone()
+    
+    buildProps.put('file', [jarVersion: project.version])
+    
+    filesMatching(['META_INF/mods.toml', 'pack.mcmeta']) {
+        expand buildProps
+    }
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
