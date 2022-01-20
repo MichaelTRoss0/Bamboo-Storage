@@ -2,7 +2,6 @@ buildscript {
     repositories {
         // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
-        maven { url = 'https://plugins.gradle.org/m2/' }
         gradlePluginPortal()
         mavenCentral()
     }
@@ -17,8 +16,6 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'com.matthewprenger.cursegradle'
-apply from: 'gradle/property_helper.gradle'
-apply from: 'gradle/git_changelog.gradle'
 
 version = "${minecraft_version}-${mod_version}"
 group = "${mod_group}" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -40,7 +37,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'official', version: "${minecraft_version}"
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -148,16 +145,6 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-}
-
-processResources {
-    def buildProps = project.properties.clone()
-    
-    buildProps.put('file', [jarVersion: project.version])
-    
-    filesMatching(['META_INF/mods.toml', 'pack.mcmeta']) {
-        expand buildProps
-    }
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
