@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bamboostorage:block/bamboo_bundle"
+    }
+  }
+}
