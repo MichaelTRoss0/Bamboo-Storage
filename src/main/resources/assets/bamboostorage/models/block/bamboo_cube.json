@@ -1,8 +1,10 @@
 {
 	"credit": "Made with Blockbench",
+	//"parent": "block/block",
 	"textures": {
 		"0": "bamboostorage:block/bamboo_cube_side",
-		"1": "bamboostorage:block/bamboo_cube_top"
+		"1": "bamboostorage:block/bamboo_cube_top",
+		"particle": "bamboostorage:block/bamboo_cube_side"
 	},
 	"elements": [
 		{
