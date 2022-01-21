@@ -1,10 +1,9 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "block/block",
-	"texture_size": [32, 32],
+	"parent": "block/cube_column",
 	"textures": {
 		"0": "bamboostorage:block/bamboo_bundle_side",
-		"1": "bamboostorage:block/bamboo_bundle_top",
+		"1": "bamboostorage:block/bamboo_cube_top",
 		"particle": "bamboostorage:block/bamboo_bundle_side"
 	},
 	"elements": [
@@ -16,8 +15,8 @@
 				"east": {"uv": [8, 0, 16, 16], "texture": "#0"},
 				"south": {"uv": [0, 0, 8, 16], "texture": "#0"},
 				"west": {"uv": [8, 0, 16, 16], "texture": "#0"},
-				"up": {"uv": [16, 16, 0, 0], "texture": "#1"},
-				"down": {"uv": [16, 0, 0, 16], "texture": "#1"}
+				"up": {"uv": [8, 8, 0, 0], "texture": "#1"},
+				"down": {"uv": [16, 0, 8, 8], "texture": "#1"}
 			}
 		}
 	]
