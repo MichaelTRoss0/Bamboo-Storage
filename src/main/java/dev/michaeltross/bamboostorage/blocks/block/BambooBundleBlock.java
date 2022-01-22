@@ -1,10 +1,6 @@
 package dev.michaeltross.bamboostorage.blocks.block;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -37,9 +33,5 @@ public class BambooBundleBlock extends RotatedPillarBlock {
            return Y_AXIS_AABB;
         }
      }
-    
-    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-        return 200;
-    }
 
 }
