@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "bamboostorage:bamboo_bundle",
+    "bamboostorage:bamboo_cube"
+  ]
+}
