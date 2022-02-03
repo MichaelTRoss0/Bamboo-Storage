@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#bamboostorage:storage_blocks/bamboo"
+    "#forge:storage_blocks/bamboo"
   ]
 }
